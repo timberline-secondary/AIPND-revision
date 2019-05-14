@@ -116,14 +116,11 @@ def main():
     print_results(results, results_stats, None, True, True)
     
     # TODO 1: Measure total program runtime by collecting end time
-    end_time = time()
-    
+    # end_time = 
+   
     # TODO 1: Computes overall runtime in seconds & prints it in hh:mm:ss format
-    tot_time = end_time - start_time
-    print("\n** Total Elapsed Runtime:",
-          str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
-          +str(int((tot_time%3600)%60)) )
-    
+
+
 
 # Call to main function to run the program
 if __name__ == "__main__":
