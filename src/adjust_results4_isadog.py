@@ -73,6 +73,10 @@ def adjust_results4_isadog(results_dic, dogfile):
     # real answer & classifier's answer
     dognames_dic = dict()
 
+    if dogfile is None:
+        print("* Skipping 'adjust_results4_isadog' because no text file was provided.")
+        return
+
     # Reads in dognames from file, 1 name per line & automatically closes file
     with open(dogfile, "r") as infile:
         # Reads in dognames from first line in file

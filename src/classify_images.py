@@ -67,6 +67,11 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
+
+    if results_dic is None:
+      print("* Skipping 'classify_images' because no result dictionary was provided.")
+      return
+
     # Process all files in the results_dic - use images_dir to give fullpath
     # that indicates the folder and the filename (key) to be used in the 
     # classifier function

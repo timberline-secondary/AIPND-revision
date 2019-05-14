@@ -81,6 +81,10 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_correct_notdogs'] = 0
     results_stats_dic['n_correct_breed'] = 0       
     
+    if results_dic is None:
+        print("* Skipping 'calculates_results_stats' because no results dictionary was provided.")
+        return None
+
     # process through the results dictionary
     for key in results_dic:
          

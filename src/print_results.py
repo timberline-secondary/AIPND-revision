@@ -64,6 +64,11 @@ def print_results(results_dic, results_stats_dic, model,
     Returns:
            None - simply printing results.
     """   
+
+    if model is None:
+        print("* Skipping 'print_results' because no model was provided.")
+        return
+
     # Prints summary statistics over the run
     print("\n\n*** Results Summary for CNN Model Architecture",model.upper(), 
           "***")
