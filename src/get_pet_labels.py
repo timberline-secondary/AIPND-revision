@@ -20,7 +20,7 @@
 # Imports python modules
 from os import listdir
 
-# TODO 2: EDIT and ADD code BELOW to do the following that's stated in the 
+# TODO 3: EDIT and ADD code BELOW to do the following that's stated in the 
 #       comments below that start with "TODO: 2" for the get_pet_labels function 
 #       Please be certain to replace None in the return statement with 
 #       results_dic dictionary that you create with this function
@@ -62,7 +62,7 @@ def get_pet_labels(image_dir):
            # Creates temporary label variable to hold pet label name extracted 
            pet_label = ""
 
-           # TODO: 2a. BELOW REPLACE pass with CODE that will process each 
+           # TODO: 3a. BELOW REPLACE pass with CODE that will process each 
            #          filename in the in_files list to extract the dog breed 
            #          name from the filename. Recall that each filename can be
            #          accessed by in_files[idx]. Be certain to place the 
@@ -80,6 +80,6 @@ def get_pet_labels(image_dir):
                print("** Warning: Duplicate files exist in directory:", 
                      in_files[idx])
  
-    # TODO 2b. Replace None with the results_dic dictionary that you created
+    # TODO 3b. Replace None with the results_dic dictionary that you created
     # with this function
     return None
