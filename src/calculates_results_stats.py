@@ -89,7 +89,7 @@ def calculates_results_stats(results_dic):
     for key in results_dic:
          
         # Labels Match Exactly
-        if len(results_dic[key]) >=2 and results_dic[key][2] == 1:
+        if len(results_dic[key]) >2 and results_dic[key][2] == 1:
             results_stats_dic['n_match'] += 1
 
         # TODO: 6a. REPLACE pass with CODE that counts how many pet images of
@@ -106,7 +106,7 @@ def calculates_results_stats(results_dic):
         pass
         
         # Pet Image Label is a Dog - counts number of dog images
-        if len(results_dic[key]) >=3 and results_dic[key][3] == 1:
+        if len(results_dic[key]) >3 and results_dic[key][3] == 1:
             results_stats_dic['n_dogs_img'] += 1
             
             # Classifier classifies image as Dog (& pet image is a dog)
