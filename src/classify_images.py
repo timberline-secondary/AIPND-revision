@@ -25,7 +25,7 @@
 from classifier import classifier 
 
 # TODO 4: EDIT and ADD code BELOW to do the following that's stated in the 
-#       comments below that start with "TODO: 3" for the classify_images function 
+#       comments below that start with "TODO: 4" for the classify_images function 
 #       Specifically EDIT and ADD code to define the classify_images function. 
 #       Notice that this function doesn't return anything because the 
 #       results_dic dictionary that is passed into the function is a mutable 
