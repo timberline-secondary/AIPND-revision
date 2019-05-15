@@ -47,15 +47,8 @@ def classifier(img_path, model_name):
     # instead of (default)training mode
     model = model.eval()
     
-    # apply data to model - adjusted based upon version to account for 
-    # operating on a Tensor for version 0.4 & higher.
-    if int(pytorch_ver[0]) > 0 or int(pytorch_ver[1]) >= 4:
-        output = model(img_tensor)
-
-    # pytorch versions less than 0.4
-    else:
-        # apply data to model
-        output = model(data)
+    # apply data to model
+    output = model(img_tensor)
 
     # return index corresponding to predicted class
     pred_idx = output.data.numpy().argmax()
