@@ -50,7 +50,7 @@ def main():
     in_arg = get_input_args()
 
     # Function that checks command line arguments using in_arg  
-    check_command_line_arguments(in_arg)
+    #check_command_line_arguments(in_arg)
 
     
     # TODO 3: Define get_pet_labels function within the file get_pet_labels.py
@@ -88,7 +88,7 @@ def main():
     # Adjusts the results dictionary to determine if classifier correctly 
     # classified images as 'a dog' or 'not a dog'. This demonstrates if 
     # model can correctly classify dog images as dogs (regardless of breed)
-    adjust_results4_isadog(results, None)
+    adjust_results4_isadog(results, in_arg.dogfile)
 
     # Function that checks Results Dictionary for is-a-dog adjustment using results
     check_classifying_labels_as_dogs(results)
