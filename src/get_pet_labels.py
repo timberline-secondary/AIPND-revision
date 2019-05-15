@@ -21,7 +21,7 @@
 from os import listdir
 
 # TODO 3: EDIT and ADD code BELOW to do the following that's stated in the 
-#       comments below that start with "TODO: 2" for the get_pet_labels function 
+#       comments below that start with "TODO: 3" for the get_pet_labels function 
 #       Please be certain to replace None in the return statement with 
 #       results_dic dictionary that you create with this function
 # 
@@ -45,8 +45,6 @@ def get_pet_labels(image_dir):
     # Creates list of files in directory
     in_files = listdir(image_dir)
     
-    # Processes each of the files to create a dictionary where the key
-    # is the filename and the value is the picture label (below).
  
     # Creates empty dictionary for the results (pet labels, etc.)
     results_dic = dict()
