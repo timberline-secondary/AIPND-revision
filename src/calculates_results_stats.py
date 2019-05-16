@@ -39,8 +39,8 @@
 #            pct_correct_notdogs - percentage of correctly classified NON-dogs
 #
 ##
-# TODO 5: EDIT and ADD code BELOW to do the following that's stated in the 
-#       comments below that start with "TODO: 5" for the calculates_results_stats 
+# TODO 6: EDIT and ADD code BELOW to do the following that's stated in the 
+#       comments below that start with "TODO: 6" for the calculates_results_stats 
 #       function. Please be certain to replace None in the return statement with
 #       the results_stats_dic dictionary that you create with this function
 # 
@@ -81,18 +81,18 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_correct_notdogs'] = 0
     results_stats_dic['n_correct_breed'] = 0       
     
-    if results_dic is None:
-        print("* Skipping 'calculates_results_stats' because no results dictionary was provided.")
+    if results_dic is None or len(results_dic[list(results_dic)[0]]) < 4:
+        print("* Skipping 'calculates_results_stats' because no results dictionary isn't complete yet.")
         return None
 
     # process through the results dictionary
     for key in results_dic:
          
         # Labels Match Exactly
-        if len(results_dic[key]) >2 and results_dic[key][2] == 1:
+        if results_dic[key][2] == 1:
             results_stats_dic['n_match'] += 1
 
-        # TODO: 5a. REPLACE pass with CODE that counts how many pet images of
+        # TODO: 6a. REPLACE pass with CODE that counts how many pet images of
         #           dogs had their breed correctly classified. This happens 
         #           when the pet image label indicates the image is-a-dog AND 
         #           the pet image label and the classifier label match. You 
@@ -106,7 +106,7 @@ def calculates_results_stats(results_dic):
         pass
         
         # Pet Image Label is a Dog - counts number of dog images
-        if len(results_dic[key]) >3 and results_dic[key][3] == 1:
+        if results_dic[key][3] == 1:
             results_stats_dic['n_dogs_img'] += 1
             
             # Classifier classifies image as Dog (& pet image is a dog)
@@ -114,7 +114,7 @@ def calculates_results_stats(results_dic):
             if results_dic[key][4] == 1:
                 results_stats_dic['n_correct_dogs'] += 1
 
-        # TODO: 5b. REPLACE pass with CODE that counts how many pet images 
+        # TODO: 6b. REPLACE pass with CODE that counts how many pet images 
         #           that are NOT dogs were correctly classified. This happens 
         #           when the pet image label indicates the image is-NOT-a-dog 
         #           AND the classifier label indicates the images is-NOT-a-dog.
@@ -144,7 +144,7 @@ def calculates_results_stats(results_dic):
     results_stats_dic['n_notdogs_img'] = (results_stats_dic['n_images'] - 
                                       results_stats_dic['n_dogs_img']) 
 
-    # TODO: 5c. REPLACE zero(0.0) with CODE that calculates the % of correctly
+    # TODO: 6c. REPLACE zero(0.0) with CODE that calculates the % of correctly
     #           matched images. Recall that this can be calculated by the
     #           number of correctly matched images ('n_match') divided by the 
     #           number of images('n_images'). This result will need to be 
@@ -153,7 +153,7 @@ def calculates_results_stats(results_dic):
     # Calculates % correct for matches
     results_stats_dic['pct_match'] = 0.0
 
-    # TODO: 5d. REPLACE zero(0.0) with CODE that calculates the % of correctly
+    # TODO: 6d. REPLACE zero(0.0) with CODE that calculates the % of correctly
     #           classified dog images. Recall that this can be calculated by 
     #           the number of correctly classified dog images('n_correct_dogs')
     #           divided by the number of dog images('n_dogs_img'). This result 
@@ -162,7 +162,7 @@ def calculates_results_stats(results_dic):
     # Calculates % correct dogs
     results_stats_dic['pct_correct_dogs'] = 0.0
 
-    # TODO: 5e. REPLACE zero(0.0) with CODE that calculates the % of correctly
+    # TODO: 6e. REPLACE zero(0.0) with CODE that calculates the % of correctly
     #           classified breeds of dogs. Recall that this can be calculated 
     #           by the number of correctly classified breeds of dog('n_correct_breed') 
     #           divided by the number of dog images('n_dogs_img'). This result 
@@ -180,6 +180,6 @@ def calculates_results_stats(results_dic):
         results_stats_dic['pct_correct_notdogs'] = 0.0
 
         
-    # TODO 5f. REPLACE None with the results_stats_dic dictionary that you 
+    # TODO 6f. REPLACE None with the results_stats_dic dictionary that you 
     # created with this function 
-    return None
+    return results_stats_dic
