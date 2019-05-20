@@ -43,6 +43,7 @@ def classifier(img_path, model_name):
     # for inference) we can set requires_gradient to False. Here we just set 
     # requires_grad_ to False on our tensor 
     img_tensor.requires_grad_(False)
+<<<<<<< HEAD
 
 
     # apply model to input
@@ -83,6 +84,9 @@ def classifier(img_path, model_name):
     img_tensor.requires_grad_(False)
 
 
+=======
+    
+>>>>>>> 548e227c9d3821710a159daa686c2528b62c4799
     # apply model to input
     model = models[model_name]
 
@@ -90,6 +94,10 @@ def classifier(img_path, model_name):
     # instead of (default)training mode
     model = model.eval()
     
+<<<<<<< HEAD
+=======
+    # apply data to model
+>>>>>>> 548e227c9d3821710a159daa686c2528b62c4799
     output = model(img_tensor)
 
     # return index corresponding to predicted class
